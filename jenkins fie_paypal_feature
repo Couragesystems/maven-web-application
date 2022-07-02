@@ -6,6 +6,7 @@ node{
     //sh "git clone https://github.com/LandmakTechnology/maven-web-application"
     //bat "git clone https://github.com/LandmakTechnology/maven-web-application"
  } 
+ /*
  stage('2Test&Build'){
     sh "${mavenHome}/bin/mvn install"
  } 
@@ -27,6 +28,7 @@ node{
  stage('7deploy_prod'){
      deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://54.221.56.224:8080/manager/html')], contextPath: null, war: 'target/*war'
  }
+ */
  stage('8Notification'){
      emailext body: '''build status for front end application
 
